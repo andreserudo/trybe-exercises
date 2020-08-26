@@ -8,6 +8,16 @@ body{
   font-family: serif;
 }
 
+h1{
+  background-color: #829BD9;
+  color: white;
+}
+
+h2{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 header{
   background-color: #FFEECF;
   height: 50px;
@@ -28,4 +38,45 @@ header ul li{
   display: inline-block;
   justify-content: center;
   width: 120px;
+}
+
+#paginaInicial,
+#contato,
+#sobre{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#paginaInicial section,
+#contato section,
+#sobre section
+{
+  width: 100%;
+  display: inline-block;
+}
+
+#paginaInicial section img{
+  width: 600px;
+  display: inline;
+}
+
+#paginaInicial section #descricao{ 
+  display: inline-block;
+  min-width: 200px;
+  text-align: justify;
+  padding-left: 4em;
+  padding-right: 4em;  
+}
+
+#paginaInicial section #question{
+  width: 100%;
+  text-align: center;
+}
+
+#paginaInicial section #answer{
+  min-width: 350px;
+  text-align: justify;
+  padding-left: 4em;
+  padding-right: 4em;  
 }
