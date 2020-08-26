@@ -26,7 +26,7 @@ a{
 
 header{
   background-color: #FFEECF;
-  height: 50px;
+  height: 55px;
 }
 
 header ul{
@@ -44,6 +44,13 @@ header ul li{
   display: inline-block;
   justify-content: center;
   width: 120px;
+  background-color: #AF9AB2;
+  padding: .3rem;
+}
+
+header ul li a{
+  color: white;
+  font-weight: bold;
 }
 
 #paginaInicial,
@@ -102,4 +109,37 @@ header ul li{
 
 #shrimp{
   margin-top: 1rem;
+}
+
+#sobre ul li{
+  margin-bottom: 1rem;
+}
+
+#sobre ul li:first-child{
+  margin-top: 1rem;
+}
+
+#sobre ul li a{
+  background-color: #AF9AB2;
+  color:white;
+  padding: .2rem;
+  border-radius: 1px;
+}
+
+#contato section a{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+footer{
+  background-color: #FFEECF;  
+  text-align: center;
+}
+
+footer #me{  
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: 14px;
+  font-weight: bolder;    
 }
