@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #c9a690;  
+  color: #0E0907;
+  font-family: serif;
+  font-size: 18px;
+}
+
+h1{
+  background-color: #829BD9;
+  color: white;
+}
+
+h2{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+header{
+  background-color: #FFEECF;
+  height: 55px;
+}
+
+header ul{
+  width: 100%;  
+
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+header ul li{
+  display: inline-block;
+  justify-content: center;
+  width: 120px;
+  background-color: #AF9AB2;
+  padding: .3rem;
+}
+
+header ul li a{
+  color: white;
+  font-weight: bold;
+}
+
+#paginaInicial,
+#contato,
+#sobre{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#paginaInicial section,
+#contato section,
+#sobre section
+{
+  width: 100%;
+  display: inline-block;
+}
+
+#paginaInicial section img{
+  width: 600px;
+  display: inline;
+}
+
+#paginaInicial section #descricao{ 
+  display: inline-block;
+  min-width: 200px;
+  text-align: justify;
+  padding-left: 4em;
+  padding-right: 4em;  
+}
+
+#paginaInicial section #question{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#paginaInicial section #answer{
+  min-width: 350px;
+  text-align: justify;
+  margin-bottom: 1rem;  
+  padding-left: 4em;
+  padding-right: 4em;  
+}
+
+#paginaInicial table{
+  border-collapse: collapse;
+  margin: auto;
+}
+
+#fichaTecnica tr,
+#fichaTecnica td{
+  border: 1px solid #0E0907;
+  padding: .5em;
+}
+
+#shrimp{
+  margin-top: 1rem;
+}
+
+#sobre ul li{
+  margin-bottom: 1rem;
+}
+
+#sobre ul li:first-child{
+  margin-top: 1rem;
+}
+
+#sobre ul li a{
+  background-color: #AF9AB2;
+  color:white;
+  padding: .2rem;
+  border-radius: 1px;
+}
+
+#contato section a{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+footer{
+  background-color: #FFEECF;  
+  text-align: center;
+}
+
+footer #me{  
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: 14px;
+  font-weight: bolder;    
+}
