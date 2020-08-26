@@ -5,7 +5,9 @@
 
 body{
   background-color: #c9a690;  
+  color: #0E0907;
   font-family: serif;
+  font-size: 18px;
 }
 
 h1{
@@ -16,6 +18,10 @@ h1{
 h2{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+a{
+  text-decoration: none;
 }
 
 header{
@@ -72,11 +78,28 @@ header ul li{
 #paginaInicial section #question{
   width: 100%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 #paginaInicial section #answer{
   min-width: 350px;
   text-align: justify;
+  margin-bottom: 1rem;  
   padding-left: 4em;
   padding-right: 4em;  
+}
+
+#paginaInicial table{
+  border-collapse: collapse;
+  margin: auto;
+}
+
+#fichaTecnica tr,
+#fichaTecnica td{
+  border: 1px solid #0E0907;
+  padding: .5em;
+}
+
+#shrimp{
+  margin-top: 1rem;
 }
