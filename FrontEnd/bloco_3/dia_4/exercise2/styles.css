@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #c9a690;  
+  font-family: serif;
+}
+
+header{
+  background-color: #FFEECF;
+  height: 50px;
+}
+
+header ul{
+  width: 100%;  
+
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+header ul li{
+  display: inline-block;
+  justify-content: center;
+  width: 120px;
+}
