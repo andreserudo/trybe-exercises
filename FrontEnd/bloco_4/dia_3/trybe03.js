@@ -10,7 +10,7 @@ n = 5
 */
 const n = 5;
 const simbolo = '*';
-const espaco = '_';
+const espaco = ' ';
 
 let texto = '';
 let limiteTexto = 0;
