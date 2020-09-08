@@ -161,7 +161,14 @@
 
       // bonus1 : Adicione a classe title na tag h1 criada;
       titulo.className = 'title';
-      
+
+      // bonus2 : Adicione a classe description nas 3 tags h3 criadas;
+      let titulos = document.querySelectorAll('h3');
+      console.log(titulos);
+
+      for(let i=0; i < titulos.length; i += 1){
+        titulos[i].className = 'description';
+      }
       
     </script>
   </body>
