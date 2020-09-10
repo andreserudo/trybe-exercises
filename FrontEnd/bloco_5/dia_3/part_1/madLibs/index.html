@@ -17,6 +17,29 @@
  <button id="lib-button">Lib it!</button>
   
  <div id="story"></div>
-  
+
+ <script>
+    // 1. Add a script tag to the bottom of the page for your code.
+    // 2 . Add an event listener to the button so that it calls a makeMadLib 
+    //   function when clicked.
+    // 3 . In the makeMadLib function, retrieve the current values of the form 
+    //   input elements, make a story from them, and output that in the story 
+    //   div (like "Pamela really likes pink cucumbers.")
+    let button = document.getElementById('lib-button');
+
+    button.addEventListener("click", makeMadLib)
+
+    function makeMadLib(){
+      let noun = document.getElementById('noun').value;
+      let adjectiveInput = document.getElementById('adjective').value;
+      let personInput = document.getElementById('person').value;
+
+      let divStory = document.getElementById('story');
+      
+      divStory.innerText = noun + ' ' + adjectiveInput  + ' ' + personInput;
+      
+    }
+
+ </script>
  </body>
 </html>
