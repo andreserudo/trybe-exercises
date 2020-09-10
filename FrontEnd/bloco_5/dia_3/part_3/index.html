@@ -6,7 +6,33 @@
  </head>
  <body>
   
-  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  <img id="cat" style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
   
+  <script>
+    /*
+    1 . Add a script tag at the bottom of the page, 
+        where you'll put all your code.
+    2 . Create a variable to store a reference to the img.
+    3 . Change the style of the img to have a "left" of "0px", 
+        so that it starts at the left hand of the screens.
+    4 . Create a function called catWalk() that moves the cat 10 pixels 
+        to the right of where it started, by changing the "left" style property.
+    5 . Call that function every 50 milliseconds. Your cat should now be moving 
+        across the screen from left to right. Hurrah!    
+    */
+    let imagem = document.getElementById('cat');
+
+    imagem.style.marginLeft = '0px';
+
+    function catWalk(){      
+      imagem.style.marginLeft = (parseInt(imagem.style.marginLeft) + 10) + 'px';      
+    }    
+
+    window.onload = catWalking;
+
+    function catWalking(){
+      window.setInterval(catWalk, 500);
+    }
+  </script>
  </body>
 </html>
