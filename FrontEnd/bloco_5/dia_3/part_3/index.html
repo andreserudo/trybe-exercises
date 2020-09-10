@@ -23,19 +23,35 @@
     Bonus #1: When the cat reaches the right-hand of the screen, restart them 
       at the left hand side ("0px"). So they should keep walking from left to 
       right across the screen, forever and ever.  
+
+    Bonus #2: When the cat reaches the right-hand of the screen, make them move
+            backwards instead. They should keep walking back and forth forever
+            and ever.      
     */
     let imagem = document.getElementById('cat');
+    let paraFrente = true;
 
     imagem.style.marginLeft = '0px';
     
     function catWalk(){      
       
-      if( (  parseInt(imagem.style.marginLeft) + 286) >= parseInt(window.innerWidth) ){
-        imagem.style.marginLeft = '0px';
+      if(paraFrente){
+        if( (  parseInt(imagem.style.marginLeft) + 286) >= parseInt(window.innerWidth) ){
+          //imagem.style.marginLeft = '0px';
+          imagem.style.marginLeft = (parseInt(imagem.style.marginLeft) - 10) + 'px';      
+          paraFrente = false;
+        }else{
+          imagem.style.marginLeft = (parseInt(imagem.style.marginLeft) + 10) + 'px';      
+        }
       }else{
-        imagem.style.marginLeft = (parseInt(imagem.style.marginLeft) + 10) + 'px';      
+        if( (  parseInt(imagem.style.marginLeft) ) <= 0 ){
+          //imagem.style.marginLeft = '0px';
+          imagem.style.marginLeft = (parseInt(imagem.style.marginLeft) + 10) + 'px';      
+          paraFrente = true;
+        }else{
+          imagem.style.marginLeft = (parseInt(imagem.style.marginLeft) - 10) + 'px';      
+        }
       }
-      
     }    
 
     window.onload = catWalking;
