@@ -11,3 +11,21 @@ const exercicio1 =  (num) => num * (num === 1 ? 1 : exercicio1(num -  1));
 
 console.log(exercicio1(4));
 
+/*
+Crie uma função que receba uma frase e retorne qual a maior palavra.
+Exemplo:
+longestWord("Antônio foi no banheiro e não sabemos o que aconteceu") // retorna 'aconteceu'
+*/
+
+// const exercicio2 = function (frase){
+//   const vetor = frase.split(' ').map( (item, index) => { 
+//     const obj = {};
+//     obj[parseInt(index)] = item.length;
+//     return obj;
+//   });
+//   const maiorPalavra = Math.max(...vetor);
+
+//   return maiorPalavra;
+// }
+
+// console.log(exercicio2('é uma frase'));
