@@ -1,4 +1,8 @@
 /*
+Crie uma função para adicionar o turno da manhã na lesson2. 
+Essa função deve possuir três parâmetros, sendo eles: o objeto a ser modificado,
+a chave que deverá ser adicionada e o valor dela.
+*/
 const lesson1 = {
   materia: 'Matemática',
   numeroEstudantes: 20,
@@ -19,7 +23,12 @@ const lesson3 = {
   turno: 'noite',
 };
 
-Crie uma função para adicionar o turno da manhã na lesson2. 
-Essa função deve possuir três parâmetros, sendo eles: o objeto a ser modificado,
-a chave que deverá ser adicionada e o valor dela.
-*/
+const shiftValue = "tarde";
+const shift = "turno";
+const addTurn = (lesson2, shift, shiftValue) => {
+  return lesson2.shift = shiftValue;
+}
+
+addTurn(lesson2, shift, shiftValue);
+
+console.log(lesson2);
