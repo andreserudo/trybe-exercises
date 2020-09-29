@@ -26,7 +26,8 @@ const wrongResult = [1, 2, 3, 4];
 const expected02 = myRemove([1, 2, 3, 4], 5);
 const result02 = [1, 2, 3, 4];
 
-assert.ok(expected01 == result01);
+assert.deepStrictEqual(expected01, result01);
 assert.ok(expected01 == wrongResult, "o retorno nao deveria conter o 3");
 
 assert.ok(expected02 == result02);
+assert.deepStrictEqual(expected02, result02);
