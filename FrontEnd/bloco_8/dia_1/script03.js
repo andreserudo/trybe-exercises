@@ -77,8 +77,13 @@ const expected_result = {
   releaseYear: 1991
 };
 
-function getNamedBook() {
+function getNamedBook(books) {
   // escreva seu código aqui
+  const lengthToFind = 26;
+
+  const item = books.find( book => book.name.length === lengthToFind);
+
+  return item;
 }
 
-assert.deepEqual(getNamedBook(), expected_result);
+assert.deepEqual(getNamedBook(books), expected_result);
