@@ -11,6 +11,18 @@ const names = [
 
 function containsA() {
   // escreva seu código aqui
+  const countingA = names.reduce((acc, cur) => {
+    let sumA = 0;
+    for(let i=0; i<cur.length; i++){
+      if( (cur[i] === 'A') ||(cur[i] === 'a') ){
+        sumA += 1;
+      }
+    }
+    
+    return sumA + acc;
+  }, 0);
+
+  return countingA;
 }
 
 assert.deepEqual(containsA(), 20);
