@@ -16,6 +16,17 @@ pode ver o objeto esperado na constante expected.
 
 function studentAverage() {
   // escreva seu código aqui
+  const students = alunos.map( (student, index) => {
+    let average = notas[index].reduce((acc, cur) => {
+      return acc + cur;
+    }, 0);
+
+    average = average / notas[index].length;
+
+    return { name: student, average: average}
+  });
+
+  return students;
 }
 
 const expected = [
