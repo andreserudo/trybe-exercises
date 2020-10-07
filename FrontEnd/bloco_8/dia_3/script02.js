@@ -67,7 +67,21 @@ const books = [
 //Crie uma string com os nomes de todas as pessoas autoras.
 
 function allNames() {
-  // escreva seu código aqui
+  // escreva seu código aqui  
+  const allNamesInOne = books.reduce(
+    (acc, cur, index) => {
+      
+      if(index === books.length - 1){
+        cur.author.name = cur.author.name.concat('','.');
+      }else{
+        cur.author.name = cur.author.name.concat('',',');
+      }      
+
+      return  acc.concat(' ', cur.author.name);
+    }, 'Nomes:' 
+  );
+      
+  return allNamesInOne;
 }
 
 assert.deepEqual(allNames(), "Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");
