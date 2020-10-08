@@ -33,6 +33,14 @@ const people = [
 */
 
 // escreva filterPeople abaixo
+function filterPeople(){
+  
+  const list = people.filter( ({bornIn, nationality}) => {    
+    return ( ( bornIn >= 1900) && (bornIn <= 1999) && (nationality === 'Australian'));}
+  );
+
+  return list;
+}
 
 const filteredPeople = filterPeople(people)
 
