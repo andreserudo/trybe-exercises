@@ -6,6 +6,13 @@
 const assert = require('assert')
 
 // escreva sum abaixo
+function sum(a=0, ...rest){
+  let sumOf;
+
+  sumOf = rest.reduce((acc, cur) => acc + cur, a);
+
+  return sumOf;
+}
 
 assert.equal(sum(), 0)
 assert.equal(sum(1), 1)
