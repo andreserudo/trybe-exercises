@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Form</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <label for="name">Name</label>
+      <input type="text" id="name" maxlength="40">  
+
+      <label for="email">Email</label>
+      <input type="email" id="email" maxlength="50">  
+
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" maxlength="11">  
+
+      <label for="address">Address</label>
+      <input type="text" id="address" maxlength="200">  
+
+      <label for="city">City</label>
+      <input type="text" id="city" maxlength="28">
+
+      <label for="address">State</label>
+      <select id="states"></select>
+            
+      <label>
+        <input type="radio" name="place" id="home">
+        <span>Home</span>
+      </label>
+
+      <label>
+        <input type="radio" name="place" id="home">
+        <span>Home</span>
+      </label>
+
+    </fieldset>
+    <fieldset>
+      <label for="resume">Resume:</label>
+      <textarea name="resume" id="resume" cols="50" rows="10" maxlength="1000"></textarea>
+
+      <label for="attribution">Occupation:</label>
+      <input type="text" name="attribution">
+
+      <label for="jobDescription">Description:</label>
+      <input type="text" name="jobDescription" id="jobDescription">
+
+      <label for="birthdate">Birthdate</label>
+      <input type="date" name="birthdate" id="birthdate">
+    </fieldset>
+    <button type="submit">Register</button>
+    <button>Clear Fields</button>
+  </form>
+  <div class="submition"></div>
+</body>
+</html>
