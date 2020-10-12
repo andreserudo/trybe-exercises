@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="dist/css/DatePickerX.min.css">  
 </head>
 <body>
   <h1>Turma 07</h1>
@@ -11,8 +13,10 @@
   <br>
   <form>
     <fieldset>
-      <label for="name">Name</label>
-      <input type="text" id="name" maxlength="40" class='form-element' required>  
+      <div class="name-container">
+        <label for="name">Name</label>
+        <input type="text" id="name" maxlength="40" class='form-element' required>    
+      </div>
 
       <label for="email">Email</label>
       <input type="email" id="email" maxlength="50" class='form-element' required>  
@@ -28,16 +32,18 @@
 
       <label for="address">State</label>
       <select id="states" class='form-element' required></select>
-            
-      <label>
-        <input type="radio" name="place" id="home" class='form-element'>
-        <span>Home</span>
-      </label>
-
-      <label>
-        <input type="radio" name="place" id="home" class='form-element'>
-        <span>Home</span>
-      </label>
+      
+      <div class="place-container">
+        <label>
+          <input type="radio" name="place" value="Home" id="home" >
+          <span>Home</span>
+        </label>
+  
+        <label>
+          <input type="radio" name="place" value="Apartment" id="apto" >
+          <span>Apartment</span>
+        </label>  
+      </div>
 
     </fieldset>
     <br>
@@ -52,14 +58,18 @@
       <label for="jobDescription">Description:</label>
       <input type="text" name="jobDescription" id="jobDescription" required>
 
-      <label for="birthdate">Birthdate</label>
-      <input type="date" name="birthdate" id="birthdate" required>
+      <div class="birthDate">
+        <label for="birthdate">Birthdate</label>
+        <input name="birthdate" id="birthdate" class='form-element' required>  
+      </div>
     </fieldset>
     <button type="submit" id='submitBtn'>Register</button>
     <button type="button" id='clearBtn'>Clear Fields</button>
   </form>
   <div id="submition"></div> 
 
+  <script src="dist/js/DatePickerX.min.js"></script>
   <script src="script.js"></script>
+  
 </body>
 </html>

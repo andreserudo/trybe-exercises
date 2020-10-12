@@ -4,6 +4,7 @@ const selectState = document.getElementById('states');
 const birthdate = document.getElementById('birthdate');
 const formValues = document.querySelectorAll('.form-element');
 const submition = document.getElementById('submition');
+const radioPlaces = document.getElementsByName('place');
 const citiesStates = {
   'AC': 'Acre',
   'AL': 'Alagoas',
@@ -56,9 +57,18 @@ function submitEvent(e) {
 
   formValues.forEach(element => {
     let paragraph = document.createElement('p');
-
+    
     paragraph.innerText = `${element.id}: ${element.value}`;    
     submition.appendChild(paragraph);
+  });
+
+  radioPlaces.forEach(place => {
+    if (place.checked) {
+      let paragraph = document.createElement('p');
+
+      paragraph.innerText = `${place.name}: ${place.value}`;    
+      submition.appendChild(paragraph);  
+    }
   });
 } 
 
@@ -80,4 +90,6 @@ Object.keys(citiesStates).forEach(key => {
 btnSubmit.addEventListener('click', submitEvent);
 btnClear.addEventListener('click', clearFields);
 
+document.getElementById('birthdate').DatePickerX.init();
+document.getElementById('birthdate').DatePickerX.format('d/m/yyyy');
 //console.log(citiesStates);
