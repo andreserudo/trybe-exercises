@@ -9,15 +9,15 @@ const userNationality = ({ firstName, nationality }) => `${firstName} is ${natio
 
 const delay = (maxMilliseconds = 5000) => Math.floor(Math.random() * maxMilliseconds);
 
-const getUser = () => {
+const getUser = (callback) => {  
   setTimeout(() => {
     const user = {
       firstName: "Ivan",
       lastName: "Ivanovich",
       nationality: "Russian"
     };
-    console.log(user);
-  }, delay());
+    console.log(callback(user));
+  }, delay());  
 };
 
 getUser(userFullName); // deve imprimir "Hello! My name is Ivan Ivanovich" depois de um certo tempo
