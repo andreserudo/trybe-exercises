@@ -10,3 +10,42 @@ um número:
   4. Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado
   5. Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado
 */
+const myFizzBuzz = require('./myFizzBuzz');
+
+describe('about MyFizzBuzz', () => {
+  it('should return the word fizzbuzz for divisible numbers of 3 and 5', () => {
+    const number = 15;
+    const output = 'fizzbuzz';
+
+    expect(myFizzBuzz(number)).toBe(output);
+  });
+
+  it('should return the word fizz for divisible numbers only of 3', () => {
+    const number = 9;
+    const output = 'fizz';
+
+    expect(myFizzBuzz(number)).toBe(output);
+  });  
+
+  it('should return the word buzz for divisible numbers only of 5', () => {
+    const number = 10;
+    const output = 'buzz';
+
+    expect(myFizzBuzz(number)).toBe(output);
+  });    
+
+  it('should return the number itself for non divisible numbers of 3 and 5', () => {
+    const number = 14;
+    const output = number;
+
+    expect(myFizzBuzz(number)).toBe(output);
+  });    
+
+  it('should return false for params that are not numbers', () => {
+    const number = '14';
+    const output = false;
+
+    expect(myFizzBuzz(number)).toBe(output);
+  });    
+
+});
