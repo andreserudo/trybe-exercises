@@ -29,7 +29,7 @@ const getUserName = (userID) => {
   return findUserById(userID).then(user => user.name);
 }
 
-describe(`about getUserName function: `, () => {
+describe(`using Promises: `, () => {
   it('should be able to return an username from an ID', () => {    
     return getUserName(4).then(user => {
       expect(user).toBe('Mark');
@@ -40,6 +40,25 @@ describe(`about getUserName function: `, () => {
     return getUserName(1).catch(error => {      
       expect(error).toEqual({ error: 'User with 1 not found.'});
     })
+  });
+
+});
+
+describe(`using async/await: `, () => {
+  it('should be able to return an username from an ID', async () => {
+    expect.assertions(1);
+    const user = await getUserName(5);    
+    expect(user).toBe('Paul');
+  });
+
+  it('should be able to return an error message when user is not found', async () => {    
+    const id = 0;
+    expect.assertions(1);
+    try {
+      await getUserName(id);
+    } catch (error) {
+      expect(error).toEqual({ error: `User with ${id} not found.`});            
+    }          
   });
 
 });
