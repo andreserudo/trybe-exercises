@@ -8,4 +8,9 @@ const uppercase = (str, callback) => {
   callback(str.toUpperCase());
 }
 
-console.log(uppercase('ttest', (element) => element));
+it(`uppercase 'test' to equal 'TEST'`, (done) => {
+  uppercase('test', (str) => {
+    expect(str).toBe('TEST');
+    done();
+  });
+});
